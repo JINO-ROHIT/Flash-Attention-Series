@@ -1,7 +1,9 @@
-### a step by step implementation for a series of softmax 
+## a step by step implementation for a series of softmax 
 
 to understand flash attention, you must fully understand and learn to derive softmax by yourself. this is a series of experiments to show different and optimized
-variations of softmax. we will do all of it in pytorch.
+variations of softmax. 
+
+we will do all of it in pytorch.
 
 this is how pytorch defines softmax as -
 
@@ -11,3 +13,8 @@ $\mathrm{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}$
 2. `02-safe-softmax.py` - this version avoids getting bit during the exp of very large values during softmax, normalizing by the largest value across each element.
 3. `03-online-softmax.py` - to keep a running version of the max across each elements and adjust the error factor each time the max changes. 
 4. `04-blocked-softmax.py` - to divide the tensor into blocks and then merge them back to calculate the final softmax.
+
+### Homework
+
+1. try to generalize `04-blocked-softmax.py` to N blocks.
+2. implement in CUDA/C++.
