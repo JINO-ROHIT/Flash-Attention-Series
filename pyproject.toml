@@ -1,7 +1,7 @@
 [project]
-name = "flash-attention-series-01-softmax"
+name = "flash-attention-series"
 version = "0.1.0"
-description = "Add your description here"
+description = "implementing flash attention"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
